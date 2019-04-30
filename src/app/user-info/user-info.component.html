@@ -1,0 +1,37 @@
+
+  <main>
+    <section class="user-info">
+      <ul>
+        <li>name: {{userInfo?.name}}</li>
+        <li>email: {{userInfo?.email}}</li>
+        <li class="address"><span>adress:</span>
+          <ul>
+            <li>city: {{userInfo?.address.city}}</li>
+            <li>street: {{userInfo?.address.street}}</li>
+            <li>zipcode: {{userInfo?.address.zipcode}}</li>
+            <li>suite: {{userInfo?.address.suite}}</li>
+            <li class="geo"><span>geo:</span>
+              <ul>
+                <li>lat: {{userInfo?.address.geo.lat}}</li>
+                <li>lng: {{userInfo?.address.geo.lng}}</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>phone: {{userInfo?.phone}}</li>
+        <li>website: {{userInfo?.website}}</li>
+        <li class="company"><span>company:</span>
+          <ul>
+            <li>bs: {{userInfo?.company.bs}}</li>
+            <li>catch phrase: {{userInfo?.company.catchPhrase}}</li>
+            <li>name: {{userInfo?.company.name}}</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+
+
+
+

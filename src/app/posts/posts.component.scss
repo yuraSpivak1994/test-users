@@ -1,0 +1,57 @@
+main {
+  width: 100%;
+
+  section.post-container {
+    width: 50%;
+
+    @media screen and(max-width: 700px) {
+      width: 90%;
+    }
+
+    .comments-btn {
+      background: #bcff87;
+      color: #000000;
+    }
+
+    & > ul {
+      margin: 50px 0 50px 0;
+      -webkit-box-shadow: -7px 6px 14px 0px rgba(0,0,0,0.75);
+      -moz-box-shadow: -7px 6px 14px 0px rgba(0,0,0,0.75);
+      box-shadow: -7px 6px 14px 0px rgba(0,0,0,0.75);
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    li {
+      margin: 8px 0 5px 0;
+    }
+
+    .comments {
+      padding: 10px 0 10px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.17);
+      height: 0;
+      overflow: hidden;
+      position: relative;
+      &:hover {
+        height: auto;
+        &:before {
+          transform: rotate(180deg);
+          transition: 0.3s;
+        }
+      }
+      &:before {
+        position: absolute;
+        right: 10px;
+        content: url(~src/assets/down-arrow.png);
+        top: 3px;
+        transition: 0.3s;
+      }
+    }
+
+
+    span {
+      font-weight: bold;
+    }
+
+  }
+}

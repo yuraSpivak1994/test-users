@@ -1,0 +1,34 @@
+<main>
+  <section class="users-container">
+      <ul *ngFor="let user of users">
+        <li>
+          <button [routerLink]="['/user-info', user.id]">User details</button>
+        <li>name: {{user.name}}</li>
+        <li>email: {{user.email}}</li>
+        <li class="address"><span>adress:</span>
+          <ul>
+            <li>city: {{user.address.city}}</li>
+            <li>street: {{user.address.street}}</li>
+            <li>zipcode: {{user.address.zipcode}}</li>
+            <li>suite: {{user.address.suite}}</li>
+            <li class="geo"><span>geo:</span>
+              <ul>
+                <li>lat: {{user.address.geo.lat}}</li>
+                <li>lng: {{user.address.geo.lng}}</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>phone: {{user.phone}}</li>
+        <li>website: {{user.website}}</li>
+        <li class="company"><span>company:</span>
+          <ul>
+            <li>bs: {{user.company.bs}}</li>
+            <li>catch phrase: {{user.company.catchPhrase}}</li>
+            <li>name: {{user.company.name}}</li>
+          </ul>
+        </li>
+      </ul>
+  </section>
+</main>
+

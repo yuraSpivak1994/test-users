@@ -1,0 +1,61 @@
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  section.users-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    & > ul {
+      margin: 20px;
+      background-color: #fff9fe;
+      min-width: 290px;
+      max-width: 330px;
+      padding: 10px;
+      box-sizing: border-box;
+      -webkit-box-shadow: -7px 6px 14px 0px rgba(0,0,0,0.75);
+      -moz-box-shadow: -7px 6px 14px 0px rgba(0,0,0,0.75);
+      box-shadow: -7px 6px 14px 0px rgba(0,0,0,0.75);
+
+      @media screen and(max-width: 700px) {
+      width: 90%;
+    }
+
+      li {
+        margin: 5px;
+      }
+      span {
+        font-weight: bold;
+      }
+    }
+
+    .address, .company, .geo {
+      height: 20px;
+      position: relative;
+      overflow: hidden;
+      transition: 0.3s ease-in-out;
+      &:hover {
+        height: 200px;
+        &:before {
+          transform: rotate(180deg);
+          transition: 0.3s;
+        }
+      }
+      &:before {
+        position: absolute;
+        left: 100px;
+        content: url(~src/assets/down-arrow.png);
+        top: 3px;
+        transition: 0.3s;
+      }
+    }
+
+    .company {
+      &:hover {
+        height: 90px;
+      }
+    }
+  }
+}

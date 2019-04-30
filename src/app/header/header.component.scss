@@ -1,0 +1,21 @@
+section.header-container {
+  width: 100%;
+  background-color: #efefef;
+
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    flex-wrap: wrap;
+
+    span {
+      padding: 20px;
+
+      a {
+        text-decoration: none;
+        color: initial;
+      }
+    }
+  }
+}
